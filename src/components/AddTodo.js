@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { View, StyleSheet, TextInput, Button, Alert } from 'react-native'
+import { theme } from '../styles/theme'
 
 export const AddTodo = ({ addTodo }) => {
 	const [value, setValue] = useState('')
@@ -9,7 +10,7 @@ export const AddTodo = ({ addTodo }) => {
 			addTodo(value)
 			setValue('')
 		} else {
-			Alert.alert('Enter you todo')
+			Alert.alert('Enter you todo...')
 		}
 	}
 
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
 	input: {
 		width: '75%',
 		borderBottomWidth: 2,
-		borderBottomColor: '#3949ab',
+		borderBottomColor: theme.mainColor,
 		padding: 5,
 	},
 })
